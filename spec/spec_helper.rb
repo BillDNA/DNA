@@ -16,8 +16,8 @@
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
 
-  config.use_transactional_fixtures = false
-
+  #config.use_transactional_fixtures = false
+  config.warnings = false
   config.before(:suite) do
     DatabaseCleaner.clean_with(:truncation)
   end
