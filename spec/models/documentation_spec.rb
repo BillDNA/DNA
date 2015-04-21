@@ -1,5 +1,12 @@
 require 'rails_helper'
 
-RSpec.describe Documentation, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+describe Documentation do
+  it 'is valid with title, version and body' do
+    expect(build(:valid_test_doc)).to be_valid
+  end
+
+  it 'is invalid without a title' do
+    expect(build(:no_title_doc)).to_not be_valid
+  end
 end
